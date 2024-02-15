@@ -39,6 +39,12 @@ jobs:
       - name: Install dependencies
         run: |
           make install
+      
+      - name: Make scripts executable
+        run: |
+          chmod +x scripts/cli/test.sh
+          chmod +x scripts/server/test-local.sh
+          chmod +x scripts/server/test.sh
 
       - name: Test cli
         run: |
